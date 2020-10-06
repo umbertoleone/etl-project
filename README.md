@@ -23,4 +23,4 @@ We loaded our dataframes to a postgres database.
 
 We created a final table and populated it using SQLAlchemy.
 ## 4. Test
-After loading, we used information from our db for calculating correlation and covariance of the merged data, filtering by candidate.
+After loading, we extracted data from our database for calculating correlation and covariance of the merged data, filtering by candidate and by county. Our test indicated that correlation in case of the candidate Trump was negative (the more unemployment the more likely to vote for Trump) opposed to candidate Clinton case that was positive (the less unemployment the more likely to vote for Clinton).
