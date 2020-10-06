@@ -13,14 +13,18 @@ Sources links:
 
 ## 2.	Transformation
 
-a.	Import: Three datasets were imported into a jupyter notebook. The datasets from kaggle were imported via read_csv, and the dataset from infoplease was imported via read_html.
-b.	After scraping and creating a table with the states abbreviations, we mapped it into the unemployment dataframe following creation of a dictionary. After mapping,  we created new csv files and  exported them. We used these csv files for further transformation.
-c.	Columns selection, rename and dropna methods. We selected columns from each dataset, and dropna values. We renamed columns for  consistency.  
-d.	After cleaning both datasets we merged them.
+* Import: Three datasets were imported into a jupyter notebook. The datasets from kaggle were imported via read_csv, and the dataset from infoplease was imported via read_html.
+
+* After scraping and creating a table with the states abbreviations, we mapped it into the unemployment dataframe following creation of a dictionary. After mapping,  we created new csv files and  exported them. We used these csv files for further transformation.
+
+* Columns selection, rename and dropna methods. We selected columns from each dataset, and dropna values. We renamed columns for  consistency.  
+
+* After cleaning both datasets we merged them.
+
 
 ## 3. Loading
-We loaded our dataframes to a postgres database.
 
-We created a final table and populated it using SQLAlchemy.
+We loaded our dataframes to a postgres database, and created a final table and populated it using SQLAlchemy.
+
 ## 4. Test
 After loading, we extracted data from our database for calculating correlation and covariance of the merged data, filtering by candidate and by county. Our test indicated that correlation in case of the candidate Trump was negative (the more unemployment the more likely to vote for Trump) opposed to candidate Clinton case that was positive (the less unemployment the more likely to vote for Clinton).
